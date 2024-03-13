@@ -1,0 +1,102 @@
+/*
+style for header component
+*/
+
+.header {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--header);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    
+    padding: 0% 1%;
+}
+
+.brand {
+    margin-left: 10px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+}
+
+.button {
+    background-color: inherit;
+}
+
+.drawer {
+    position: sticky;
+    top: 0;
+}
+
+.drawer_header {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0% 1%;
+}
+
+.drawer_content {
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--header);
+    /* bottom shadow*/
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+}
+
+.drawer_button {
+    background-color: inherit;
+}
+
+.drawer_content button {
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .nav {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .drawer {
+        display: none;
+    }
+}
+
+/* drawer animation */
+
+.drawer_content {
+    animation-name: slideIn;
+    animation-duration: 0.3s;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}

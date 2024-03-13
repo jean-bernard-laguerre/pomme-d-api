@@ -1,0 +1,151 @@
+.title {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    border-style: inset;
+    border: 1px solid var(--primary);
+    width: clamp(350px, 100%, 100vw);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.footer {
+    display: flex;
+    outline: 1px solid var(--primary);
+    position: relative;
+    height: 40px;
+    bottom: 0;
+}
+
+.footer span {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter select {
+    height: 40px;
+    width: 100px;
+    border: 1px solid #ccc;
+    outline: none;
+    cursor: pointer;
+}
+
+.table_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 500px;
+    margin: auto;
+}
+
+.table {
+    width: clamp(350px, 100%, 100vw);
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.description {
+    width: 450px;
+}
+
+.table_head {
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    color: #fff;
+    height: 40px;
+}
+
+.table_body {
+    width: inherit;
+    overflow: auto;
+}
+
+.table_body tr .delete_button {
+    visibility: hidden;
+}
+
+.table_body tr .delete_button::before{
+    
+}
+
+.table_body tr:hover .delete_button {
+    visibility: inherit;
+}
+
+.credit {
+    background-color: #00ff000f;
+}
+
+.debit {
+    background-color: #ff000010;
+}
+
+.credit:hover {
+    background-color: #04a00449;
+}
+
+.debit:hover {
+    background-color: #ff000049;
+}
+
+.table_body tr {
+    border-top: 2px solid #ffffff;
+}
+    
+.delete_button {
+    margin: auto;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+.delete_button:hover {
+    filter: drop-shadow(0 0 3px var(--red));
+}
+
+.balance {
+    flex: 1;
+    height: 100%;
+    outline: 1px solid var(--primary);
+}
+
+.sort_button {
+    background-color: inherit;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.paginate {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paginate select {
+    height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
